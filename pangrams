@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String p = s.toLowerCase();
+        p = p.replace(" ", "");
+            
+        Set<Character> chars = new HashSet<Character>();
+        for (int i = 0; i < p.length(); ++i) {
+            chars.add(p.charAt(i));
+        }
+        if (chars.size() != 26) {
+            System.out.print("not pangram");
+        }
+        else{
+            System.out.println("pangram");
+        }
+    }
+}
